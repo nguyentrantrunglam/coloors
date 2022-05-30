@@ -1,22 +1,22 @@
 [
     {
+        "id": 0,
+        "hex": "#9491E2"
+    },
+    {
         "id": 1,
-        "hex": "#EFE1E1"
+        "hex": "#9BA9E0"
     },
     {
         "id": 2,
-        "hex": "#EAE3E6"
+        "hex": "#A2C2DD"
     },
     {
         "id": 3,
-        "hex": "#D6C6CD"
+        "hex": "#A8DADB"
     },
     {
         "id": 4,
-        "hex": "#C1AAB3"
-    },
-    {
-        "id": 5,
-        "hex": "#AC8D9A"
+        "hex": "#AFF2D8"
     }
 ]

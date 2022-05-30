@@ -5,7 +5,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 export default function Header() {
     return (
         <div className='header'>
-            <div className='header_logo'><img src='https://coolors.co/assets/img/logo.svg' /></div>
+            <div className='header_logo'><img src='https://coolors.co/assets/img/logo.svg' alt='logo' /></div>
             <div className='header_advertise'></div>
             <div className='header_nav'>
                 <div >
