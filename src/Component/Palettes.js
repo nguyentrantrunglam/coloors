@@ -11,9 +11,8 @@ export default function Palettes() {
             </div>
             <div className='make-palette'>
                 <ColorPalette></ColorPalette>
-                <div className='form-border'>
-                    <button id='export-btn'>Export</button>
-                </div>
+                <div className='form-border'></div>
+                <button id='export-btn'>Export</button>
             </div>
             <TopPalette></TopPalette>
         </div>

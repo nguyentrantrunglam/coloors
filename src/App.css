@@ -114,6 +114,8 @@
   margin-left: 20%;
   height: 550px;
   position: relative;
+  border-top: rgba(0, 0, 0, 0.1) 1px solid;
+  border-radius: 15px;
 }
 
 .color-palette {
@@ -217,14 +219,12 @@ input[type='color'] {
 }
 #export-btn{
   width: 20%;
-  height:25%;
+  height:7%;
   background-color: #0050ff;
   color: white;
-  position: absolute;
-  bottom: 5%;
-  left: 40%;
+  margin-left: 40%;
+  margin-top: 3%;
   border-radius: 10px;
-  z-index:10;
 }
 
 #export-btn:hover{
