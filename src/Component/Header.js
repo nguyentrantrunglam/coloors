@@ -1,6 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import SignIn from './SignIn/SignIn'
+import SignUp from './SignUp/SignUp'
 
 export default function Header() {
     return (
@@ -14,8 +16,8 @@ export default function Header() {
                 </div>
                 <div><p className='goPro'>Go Pro</p></div>
                 <span className='divider'></span>
-                <button className='signInBtn '>Sign in</button>
-                <button className='signUpBtn'>Sign up</button>
+                <button className='signInBtn  '><SignIn /></button>
+                <button className='signUpBtn'><SignUp /></button>
             </div>
         </div>
     )
