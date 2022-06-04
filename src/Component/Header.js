@@ -18,6 +18,7 @@ export default function Header() {
                 <span className='divider'></span>
                 <button className='signInBtn  '><SignIn /></button>
                 <button className='signUpBtn'><SignUp /></button>
+                
             </div>
         </div>
     )

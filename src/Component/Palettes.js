@@ -3,6 +3,11 @@ import ColorPalette from './ColorPalette'
 import TopPalette from './TopPalette'
 
 export default function Palettes() {
+    function receiveData(data) {
+        console.log(data);
+    }
+
+ 
     return (
         <div className='palette'>
             <div className='title'>
@@ -10,7 +15,7 @@ export default function Palettes() {
                 <p>Let's create your colorful palettes.</p>
             </div>
             <div className='make-palette'>
-                <ColorPalette></ColorPalette>
+                <ColorPalette onReceiveData={receiveData}></ColorPalette>
                 <div className='form-border'></div>
                 <button id='export-btn'>Export</button>
             </div>

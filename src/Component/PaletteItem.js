@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react'
 import { Colors } from '../Context';
 
 export default function PaletteItem(props) {
+    
+
     const colors = useContext(Colors)
-    const [color, setColor] = useState(colors[props.id - 1].hex)
+    const [color, setColor] = useState(colors[props.paletteNumber].palette[props.id-1].hex)
     function hexToRGB(hex) {
         const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
         if (result) {
@@ -13,17 +15,28 @@ export default function PaletteItem(props) {
             return r + g + b;//return 23,14,45 -> reformat if needed 
         }
     }
-    const [textColor, setTextColor] = useState('black');
+    var textColorValue = '';
+    function firstTextColor(value) {
+        const hex = value;
+        if (hexToRGB(hex) < 380) {
+            textColorValue = "white"
+        } else {
+            textColorValue = "black"
+        }
+    }
+    firstTextColor(color);
+    const [textColor, setTextColor] = useState(textColorValue);
     function newTextColor(value) {
         const hex = value;
-        console.log(hex)
         if (hexToRGB(hex) < 380) {
             setTextColor("white")
         } else {
             setTextColor("black")
         }
     }
-
+    props.onReceiveId(props.id)
+    props.onReceiveData(color)
+    
     return (
         <div className='item'>
             <div className='color'
@@ -44,6 +57,7 @@ export default function PaletteItem(props) {
                         onChange={e => {
                             newTextColor(e.target.value)
                             setColor(e.target.value)
+                            props.onReceiveId(props.id)
                         }} >
                     </input>
                 </div>
@@ -54,6 +68,7 @@ export default function PaletteItem(props) {
                         onChange={e => {
                             newTextColor(e.target.value)
                             setColor(e.target.value)
+                            props.onReceiveId(props.id)
                         }} >
                     </input>
                 </div>

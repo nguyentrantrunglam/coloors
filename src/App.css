@@ -252,12 +252,21 @@ input[type='color'] {
   width: 30%;
   min-width: 30%;
   height: 40%;
-  background: #000;
   border-radius: 10px;
+  display: flex;
+  border-radius: 15px;
+  overflow: none;
+  border: white 5px solid;
 } 
 .top-palettes-header{
   margin-left: 40%;
   margin-top: 60px;
   width: 20% !important;
   text-align: center;
+}
+
+.top-palettes-item-color{
+  width: 20%;
+  height: 100%;
+  z-index: -1;
 }
